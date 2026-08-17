@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Bestellung PO-2026-0412</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 794px;
+    background: #ffffff;
+    color: #16191d;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11.5px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+  .sheet { padding: 46px 54px 40px 54px; }
+
+  /* ---------- letterhead ---------- */
+  .letterhead { display: flex; justify-content: space-between; align-items: flex-start;
+                border-bottom: 2.5px solid #1b3a5c; padding-bottom: 14px; }
+  .brand-name { font-size: 21px; font-weight: 700; color: #1b3a5c; letter-spacing: .4px; }
+  .brand-tag  { font-size: 10px; color: #5d6771; margin-top: 3px; letter-spacing: 1.4px;
+                text-transform: uppercase; }
+  .brand-meta { text-align: right; font-size: 10px; color: #5d6771; line-height: 1.6; }
+  .logo-row { display: flex; align-items: center; gap: 11px; }
+  .logo-mark { width: 38px; height: 38px; border-radius: 4px; background: #1b3a5c;
+               color: #fff; font-size: 17px; font-weight: 700; display: flex;
+               align-items: center; justify-content: center; letter-spacing: -.5px; }
+
+  /* ---------- title ---------- */
+  .doc-head { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 30px; }
+  h1 { font-size: 25px; font-weight: 700; margin: 0; letter-spacing: .6px; color: #16191d; }
+  .doc-sub { font-size: 10.5px; color: #5d6771; margin-top: 3px; }
+  .ref-box { border: 1px solid #c8cfd6; border-left: 4px solid #1b3a5c;
+             padding: 8px 14px; text-align: right; }
+  .ref-label { font-size: 9px; text-transform: uppercase; letter-spacing: 1px; color: #5d6771; }
+  .ref-value { font-size: 15px; font-weight: 700; color: #1b3a5c; margin-top: 1px; }
+
+  /* ---------- meta strip ---------- */
+  .meta-strip { display: flex; gap: 0; margin-top: 20px; border: 1px solid #dde2e7;
+                background: #f7f9fb; }
+  .meta-cell { flex: 1; padding: 9px 14px; border-right: 1px solid #dde2e7; }
+  .meta-cell:last-child { border-right: none; }
+  .meta-k { font-size: 8.5px; text-transform: uppercase; letter-spacing: .9px; color: #6b757f; }
+  .meta-v { font-size: 12px; font-weight: 600; margin-top: 2px; }
+
+  /* ---------- addresses ---------- */
+  .addr-grid { display: flex; gap: 26px; margin-top: 26px; }
+  .addr { flex: 1; }
+  .addr-title { font-size: 9px; text-transform: uppercase; letter-spacing: 1.1px;
+                color: #1b3a5c; font-weight: 700; padding-bottom: 5px;
+                border-bottom: 1px solid #dde2e7; margin-bottom: 8px; }
+  .addr-company { font-weight: 700; font-size: 12.5px; }
+  .addr p { margin: 0; }
+  .addr .line { margin-top: 1px; }
+  .contact-line { margin-top: 7px; font-size: 10.5px; color: #3d454d; }
+  .contact-line span { color: #6b757f; display: inline-block; width: 46px; }
+  .same-as { margin-top: 4px; font-size: 11px; font-style: italic; color: #2c3views; }
+  .same-as-box { margin-top: 6px; background: #eef4f9; border: 1px dashed #9db4c9;
+                 padding: 8px 10px; font-size: 11px; color: #1b3a5c; }
+
+  /* ---------- items ---------- */
+  table.items { width: 100%; border-collapse: collapse; margin-top: 26px; }
+  table.items thead th { background: #1b3a5c; color: #fff; font-size: 9px; font-weight: 600;
+                         text-transform: uppercase; letter-spacing: .8px;
+                         padding: 8px 8px; text-align: left; }
+  table.items thead th.num { text-align: right; }
+  table.items tbody td { padding: 10px 8px; border-bottom: 1px solid #e4e8ec;
+                         vertical-align: top; font-size: 11.5px; }
+  table.items tbody tr:nth-child(even) td { background: #fafbfc; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td.sku { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 11px; font-weight: 600; }
+  .desc-main { font-weight: 600; }
+  .desc-sub { font-size: 9.5px; color: #6b757f; margin-top: 2px; }
+  td.pos { color: #6b757f; }
+
+  /* ---------- totals ---------- */
+  .totals-wrap { display: flex; justify-content: space-between; margin-top: 20px; gap: 30px; }
+  .notes { flex: 1; font-size: 10px; color: #5d6771; line-height: 1.6; }
+  .notes b { color: #3d454d; display: block; margin-bottom: 3px; font-size: 9px;
+             text-transform: uppercase; letter-spacing: .8px; }
+  table.totals { width: 292px; border-collapse: collapse; }
+  table.totals td { padding: 6px 10px; font-size: 11.5px; }
+  table.totals td.lbl { color: #3d454d; }
+  table.totals td.val { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+  table.totals tr.sep td { border-top: 1px solid #c8cfd6; }
+  table.totals tr.grand td { background: #1b3a5c; color: #fff; font-size: 14px;
+                             font-weight: 700; padding: 10px; }
+
+  /* ---------- payment ---------- */
+  .pay { margin-top: 24px; border: 1px solid #dde2e7; }
+  .pay-head { background: #f2f5f8; padding: 7px 14px; font-size: 9px; font-weight: 700;
+              text-transform: uppercase; letter-spacing: 1px; color: #1b3a5c;
+              border-bottom: 1px solid #dde2e7; }
+  .pay-body { display: flex; padding: 12px 14px; gap: 20px; align-items: center; }
+  .pay-col { flex: 1; }
+  .pay-k { font-size: 8.5px; text-transform: uppercase; letter-spacing: .9px; color: #6b757f; }
+  .pay-v { font-size: 12px; font-weight: 600; margin-top: 2px; }
+  .stamp { border: 2.5px solid #1e7d4f; color: #1e7d4f; border-radius: 5px;
+           padding: 7px 16px; text-align: center; transform: rotate(-4deg); }
+  .stamp-main { font-size: 17px; font-weight: 800; letter-spacing: 2.5px; line-height: 1; }
+  .stamp-sub { font-size: 8.5px; margin-top: 3px; letter-spacing: .4px; }
+
+  /* ---------- footer ---------- */
+  .signoff { margin-top: 26px; font-size: 11px; color: #3d454d; }
+  .sign-name { margin-top: 26px; font-weight: 600; }
+  .sign-rule { width: 200px; border-top: 1px solid #9aa3ab; margin-top: 2px; padding-top: 3px;
+               font-size: 9.5px; color: #6b757f; }
+  footer { margin-top: 26px; border-top: 1px solid #dde2e7; padding-top: 9px;
+           display: flex; justify-content: space-between; font-size: 8.5px; color: #8a939b; }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="letterhead">
+    <div class="logo-row">
+      <div class="logo-mark">NH</div>
+      <div>
+        <div class="brand-name">Nordlicht Handels GmbH</div>
+        <div class="brand-tag">Import &middot; Gro&szlig;handel &middot; Hamburg</div>
+      </div>
+    </div>
+    <div class="brand-meta">
+      Hafenstra&szlig;e 47 &middot; 20359 Hamburg<br>
+      USt-IdNr. DE 287 449 013<br>
+      HRB 118 402 &middot; Amtsgericht Hamburg
+    </div>
+  </div>
+
+  <div class="doc-head">
+    <div>
+      <h1>BESTELLUNG</h1>
+      <div class="doc-sub">Purchase Order &middot; Seite 1 von 1</div>
+    </div>
+    <div class="ref-box">
+      <div class="ref-label">Bestellnummer / Ihre Referenz</div>
+      <div class="ref-value">PO-2026-0412</div>
+    </div>
+  </div>
+
+  <div class="meta-strip">
+    <div class="meta-cell">
+      <div class="meta-k">Bestelldatum</div>
+      <div class="meta-v">12.03.2026</div>
+    </div>
+    <div class="meta-cell">
+      <div class="meta-k">Kundennummer</div>
+      <div class="meta-v">K-10427</div>
+    </div>
+    <div class="meta-cell">
+      <div class="meta-k">Zahlungsart</div>
+      <div class="meta-v">&Uuml;berweisung</div>
+    </div>
+    <div class="meta-cell">
+      <div class="meta-k">W&auml;hrung</div>
+      <div class="meta-v">EUR</div>
+    </div>
+  </div>
+
+  <div class="addr-grid">
+    <div class="addr">
+      <div class="addr-title">Rechnungsadresse</div>
+      <p class="addr-company">Nordlicht Handels GmbH</p>
+      <p class="line">Katrin Brandt</p>
+      <p class="line">Hafenstra&szlig;e 47</p>
+      <p class="line">20359 Hamburg</p>
+      <p class="line">Deutschland</p>
+      <div class="contact-line"><span>E-Mail:</span>k.brandt@nordlicht-handels.de</div>
+      <div class="contact-line"><span>Telefon:</span>+49 40 5512 8890</div>
+    </div>
+    <div class="addr">
+      <div class="addr-title">Lieferadresse</div>
+      <div class="same-as-box">
+        <b>Lieferadresse: identisch mit Rechnungsadresse</b><br>
+        (Delivery address identical to billing address)
+      </div>
+      <div class="contact-line" style="margin-top:12px"><span class="wide">Ansprechpartner:</span></div>
+      <p class="line" style="font-weight:600">Katrin Brandt</p>
+      <div class="contact-line"><span class="wide">Lieferung:</span> KW 12 / 2026, frei Haus</div>
+    </div>
+  </div>
+
+  <table class="items">
+    <thead>
+      <tr>
+        <th style="width:26px">Pos</th>
+        <th style="width:86px">Art.-Nr.</th>
+        <th>Bezeichnung</th>
+        <th class="num" style="width:46px">Menge</th>
+        <th class="num" style="width:82px">Einzelpreis netto</th>
+        <th class="num" style="width:56px">Rabatt</th>
+        <th class="num" style="width:44px">MwSt.</th>
+        <th class="num" style="width:80px">Betrag netto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="pos">1</td>
+        <td class="sku">NL-4021</td>
+        <td>
+          <div class="desc-main">Edelstahl Thermobecher 500ml</div>
+          <div class="desc-sub">doppelwandig, vakuumisoliert, mattschwarz</div>
+        </td>
+        <td class="num">24</td>
+        <td class="num">12,50 &euro;</td>
+        <td class="num">0 %</td>
+        <td class="num">19 %</td>
+        <td class="num">300,00 &euro;</td>
+      </tr>
+      <tr>
+        <td class="pos">2</td>
+        <td class="sku">NL-7788</td>
+        <td>
+          <div class="desc-main">Filterkaffee Bio 1kg</div>
+          <div class="desc-sub">Arabica-Mischung, ganze Bohne, DE-&Ouml;KO-006</div>
+        </td>
+        <td class="num">10</td>
+        <td class="num">18,90 &euro;</td>
+        <td class="num">10 %</td>
+        <td class="num">19 %</td>
+        <td class="num">170,10 &euro;</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="totals-wrap">
+    <div class="notes">
+      <b>Hinweise</b>
+      Alle Preise verstehen sich netto in EUR zzgl. gesetzlicher Umsatzsteuer.<br>
+      Position 2 enth&auml;lt einen Mengenrabatt von 10 % auf den Einzelpreis netto.<br>
+      Es gelten unsere Allgemeinen Einkaufsbedingungen (Stand 01/2026).
+    </div>
+    <table class="totals">
+      <tr>
+        <td class="lbl">Zwischensumme netto</td>
+        <td class="val">470,10 &euro;</td>
+      </tr>
+      <tr class="sep">
+        <td class="lbl">Gesamt netto</td>
+        <td class="val">470,10 &euro;</td>
+      </tr>
+      <tr>
+        <td class="lbl">zzgl. MwSt. 19 %</td>
+        <td class="val">89,32 &euro;</td>
+      </tr>
+      <tr class="grand">
+        <td>Gesamt brutto</td>
+        <td class="val" style="color:#fff">559,42 &euro;</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="pay">
+    <div class="pay-head">Zahlungsinformationen</div>
+    <div class="pay-body">
+      <div class="pay-col">
+        <div class="pay-k">Zahlungsart</div>
+        <div class="pay-v">&Uuml;berweisung (Bank Transfer)</div>
+      </div>
+      <div class="pay-col">
+        <div class="pay-k">Zahlungsstatus</div>
+        <div class="pay-v">Bezahlt / PAID</div>
+      </div>
+      <div class="pay-col">
+        <div class="pay-k">Zahlungsdatum</div>
+        <div class="pay-v">20.03.2026</div>
+      </div>
+      <div class="stamp">
+        <div class="stamp-main">PAID</div>
+        <div class="stamp-sub">20.03.2026 &middot; &Uuml;berweisung</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="signoff">
+    Mit freundlichen Gr&uuml;&szlig;en
+    <div class="sign-name">Katrin Brandt</div>
+    <div class="sign-rule">Einkauf &middot; Nordlicht Handels GmbH</div>
+  </div>
+
+  <footer>
+    <div>Nordlicht Handels GmbH &middot; Hafenstra&szlig;e 47 &middot; 20359 Hamburg &middot; Deutschland</div>
+    <div>Tel. +49 40 5512 8890 &middot; k.brandt@nordlicht-handels.de</div>
+  </footer>
+
+</div>
+</body>
+</html>
