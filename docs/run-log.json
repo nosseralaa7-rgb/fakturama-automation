@@ -1,0 +1,995 @@
+[
+  {
+    "step": 0,
+    "at": "2026-08-17T21:06:48",
+    "kind": "info",
+    "message": "run started",
+    "image": "assets/sample_order.png"
+  },
+  {
+    "step": 0,
+    "at": "2026-08-17T21:06:53",
+    "kind": "info",
+    "message": "vision call served by openai"
+  },
+  {
+    "step": 0,
+    "at": "2026-08-17T21:06:53",
+    "kind": "verified",
+    "message": "extraction reconciles with the document totals",
+    "reference": "PO-2026-0412",
+    "items": 2,
+    "total_gross": "559.42"
+  },
+  {
+    "step": 0,
+    "at": "2026-08-17T21:06:53",
+    "kind": "info",
+    "message": "extracted order",
+    "reference": "PO-2026-0412",
+    "debtor": "Nordlicht Handels GmbH",
+    "items": 2,
+    "gross": "559.42"
+  },
+  {
+    "step": 0,
+    "at": "2026-08-17T21:06:55",
+    "kind": "action",
+    "message": "pressed toolbar 'Order'"
+  },
+  {
+    "step": 0,
+    "at": "2026-08-17T21:06:55",
+    "kind": "verified",
+    "message": "New Order editor is open",
+    "region": "(524,155)-(1721,590)"
+  },
+  {
+    "step": 1,
+    "at": "2026-08-17T21:06:55",
+    "kind": "step",
+    "message": "new order opened",
+    "screenshot": "01-new-order-opened.png"
+  },
+  {
+    "step": 1,
+    "at": [
+      960,
+      180
+    ],
+    "kind": "action",
+    "message": "set date ~'^Date$' = 2026-03-12"
+  },
+  {
+    "step": 1,
+    "at": [
+      629,
+      240
+    ],
+    "kind": "action",
+    "message": "set field ~'^Cust.?Ref' = 'PO-2026-0412'"
+  },
+  {
+    "step": 1,
+    "at": "2026-08-17T21:07:21",
+    "kind": "action",
+    "message": "selected 'Net' from a dropdown"
+  },
+  {
+    "step": 1,
+    "at": "2026-08-17T21:07:21",
+    "kind": "verified",
+    "message": "document price mode is Net"
+  },
+  {
+    "step": 1,
+    "at": "2026-08-17T21:07:43",
+    "kind": "verified",
+    "message": "document VAT mode is `With VAT`"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:07:43",
+    "kind": "step",
+    "message": "order header filled",
+    "screenshot": "02-order-header-filled.png"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:07:50",
+    "kind": "action",
+    "message": "opened the address selector"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:07:52",
+    "kind": "action",
+    "message": "searched for 'Nordlicht Handels GmbH'"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:07:57",
+    "kind": "action",
+    "message": "pressed dialog button 'Cancel'"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:07:57",
+    "kind": "info",
+    "message": "no exact Debtor match; will create one",
+    "company": "Nordlicht Handels GmbH"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:07:59",
+    "kind": "action",
+    "message": "selected menu Data > terms of payment"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:08:09",
+    "kind": "action",
+    "message": "selected menu New > New Term of Payment"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:08:09",
+    "kind": "verified",
+    "message": "New Term of Payment editor is open",
+    "region": "(524,155)-(1721,590)"
+  },
+  {
+    "step": 2,
+    "at": [
+      712,
+      204
+    ],
+    "kind": "action",
+    "message": "set field ~'^Name$' = 'Bank Transfer'"
+  },
+  {
+    "step": 2,
+    "at": [
+      712,
+      248
+    ],
+    "kind": "action",
+    "message": "set field ~'^Description$' = 'Bank Transfer'"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:08:29",
+    "kind": "action",
+    "message": "selected 'Credit transfer' from a dropdown"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:08:31",
+    "kind": "action",
+    "message": "pressed toolbar 'Save'"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:08:31",
+    "kind": "verified",
+    "message": "save committed",
+    "editor": "Bank Transfer"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:08:31",
+    "kind": "verified",
+    "message": "created the payment method",
+    "method": "Bank Transfer"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:08:33",
+    "kind": "action",
+    "message": "selected menu New > New Debtor"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:08:33",
+    "kind": "verified",
+    "message": "New Debtor editor is open",
+    "region": "(524,155)-(1721,590)"
+  },
+  {
+    "step": 2,
+    "at": [
+      694,
+      225
+    ],
+    "kind": "action",
+    "message": "set field ~'^Company$' = 'Nordlicht Handels GmbH'"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:08:43",
+    "kind": "action",
+    "message": "set Company and contact name"
+  },
+  {
+    "step": 2,
+    "at": [
+      706,
+      407
+    ],
+    "kind": "action",
+    "message": "set field ~'^Street$' = 'Hafenstra\u00dfe 47'"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:08:53",
+    "kind": "action",
+    "message": "set ZIP and City"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:09:04",
+    "kind": "action",
+    "message": "selected 'Germany' from a dropdown"
+  },
+  {
+    "step": 2,
+    "at": [
+      1254,
+      407
+    ],
+    "kind": "action",
+    "message": "set field ~'^E.?Mail$' = 'k.brandt@nordlicht-handels.de'"
+  },
+  {
+    "step": 2,
+    "at": [
+      1254,
+      432
+    ],
+    "kind": "action",
+    "message": "set field ~'^Telephone$' = '+49 40 5512 8890'"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:09:15",
+    "kind": "action",
+    "message": "filled the Main address"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:09:18",
+    "kind": "action",
+    "message": "set checkbox 'Invoice address' = True"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:09:18",
+    "kind": "action",
+    "message": "set checkbox 'Delivery address' = True"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:09:18",
+    "kind": "verified",
+    "message": "assigned the Main address its roles"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:09:24",
+    "kind": "action",
+    "message": "opened the 'Miscellaneous' tab"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:09:40",
+    "kind": "action",
+    "message": "selected 'Net' from a dropdown"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:09:40",
+    "kind": "action",
+    "message": "set Miscellaneous fields",
+    "alias": null,
+    "price_mode": "Net"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:09:46",
+    "kind": "action",
+    "message": "opened the 'Miscellaneous' tab"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:09:57",
+    "kind": "action",
+    "message": "selected 'Bank Transfer' from a dropdown"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:09:58",
+    "kind": "action",
+    "message": "pressed toolbar 'Save'"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:09:58",
+    "kind": "verified",
+    "message": "save committed",
+    "editor": "Nordlicht Handels GmbH, Katrin Brandt"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:09:58",
+    "kind": "verified",
+    "message": "created the Debtor",
+    "company": "Nordlicht Handels GmbH"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:09:58",
+    "kind": "action",
+    "message": "switched back to the 'New Order' tab"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:10:05",
+    "kind": "action",
+    "message": "opened the address selector"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:10:07",
+    "kind": "action",
+    "message": "searched for 'Nordlicht Handels GmbH'"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:10:14",
+    "kind": "verified",
+    "message": "selected an existing Debtor",
+    "company": "Nordlicht Handels GmbH"
+  },
+  {
+    "step": 2,
+    "at": "2026-08-17T21:10:14",
+    "kind": "verified",
+    "message": "Invoice and Delivery addresses match the source document",
+    "company": "Nordlicht Handels GmbH",
+    "street": "Hafenstra\u00dfe 47"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:10:14",
+    "kind": "step",
+    "message": "debtor resolved",
+    "screenshot": "03-debtor-resolved.png"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:10:14",
+    "kind": "info",
+    "message": "resolving product 1/2: NL-4021"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:10:21",
+    "kind": "action",
+    "message": "opened the Product selector"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:10:26",
+    "kind": "action",
+    "message": "pressed dialog button 'Cancel'"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:10:26",
+    "kind": "info",
+    "message": "no exact Product match; will create one",
+    "sku": "NL-4021"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:10:28",
+    "kind": "action",
+    "message": "selected menu Data > VATs"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:10:37",
+    "kind": "action",
+    "message": "selected menu New > New VAT"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:10:37",
+    "kind": "verified",
+    "message": "New TAX Rate editor is open",
+    "region": "(524,155)-(1721,590)"
+  },
+  {
+    "step": 3,
+    "at": [
+      668,
+      204
+    ],
+    "kind": "action",
+    "message": "set field ~'^Name$' = 'VAT 19%'"
+  },
+  {
+    "step": 3,
+    "at": [
+      668,
+      248
+    ],
+    "kind": "action",
+    "message": "set field ~'^Description$' = 'VAT 19%'"
+  },
+  {
+    "step": 3,
+    "at": [
+      669,
+      298
+    ],
+    "kind": "action",
+    "message": "set field ~'^Value$' = '19'"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:10:53",
+    "kind": "action",
+    "message": "pressed toolbar 'Save'"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:10:53",
+    "kind": "verified",
+    "message": "save committed",
+    "editor": "VAT 19%"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:10:53",
+    "kind": "verified",
+    "message": "created the VAT rate",
+    "name": "VAT 19%"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:10:55",
+    "kind": "action",
+    "message": "selected menu New > New product"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:10:55",
+    "kind": "verified",
+    "message": "New product editor is open",
+    "region": "(524,155)-(1721,590)"
+  },
+  {
+    "step": 3,
+    "at": [
+      674,
+      204
+    ],
+    "kind": "action",
+    "message": "set field ~'^Number$' = 'NL-4021'"
+  },
+  {
+    "step": 3,
+    "at": [
+      673,
+      228
+    ],
+    "kind": "action",
+    "message": "set field ~'^Name$' = 'Edelstahl Thermobecher 500ml'"
+  },
+  {
+    "step": 3,
+    "at": [
+      707,
+      407
+    ],
+    "kind": "action",
+    "message": "set field ~'^\\\\(gross\\\\)$' = '14.88'"
+  },
+  {
+    "step": 3,
+    "at": [
+      708,
+      431
+    ],
+    "kind": "action",
+    "message": "set field ~'^\\\\(net\\\\)$' = '0.00'"
+  },
+  {
+    "step": 3,
+    "at": [
+      708,
+      481
+    ],
+    "kind": "action",
+    "message": "set field ~'^Stock$' = '0.00'"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:11:33",
+    "kind": "action",
+    "message": "selected 'VAT 19%' from a dropdown"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:11:34",
+    "kind": "action",
+    "message": "pressed toolbar 'Save'"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:11:34",
+    "kind": "verified",
+    "message": "save committed",
+    "editor": "Edelstahl Thermobecher 500ml"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:11:34",
+    "kind": "verified",
+    "message": "created the Product",
+    "sku": "NL-4021",
+    "gross_price": "14.88",
+    "vat": "VAT 19%"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:11:34",
+    "kind": "action",
+    "message": "switched back to the 'New Order' tab"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:11:41",
+    "kind": "action",
+    "message": "opened the Product selector"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:11:46",
+    "kind": "verified",
+    "message": "selected an existing Product",
+    "sku": "NL-4021"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:11:46",
+    "kind": "info",
+    "message": "resolving product 2/2: NL-7788"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:11:53",
+    "kind": "action",
+    "message": "opened the Product selector"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:11:58",
+    "kind": "action",
+    "message": "pressed dialog button 'Cancel'"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:11:58",
+    "kind": "info",
+    "message": "no exact Product match; will create one",
+    "sku": "NL-7788"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:12:00",
+    "kind": "action",
+    "message": "selected menu Data > VATs"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:12:10",
+    "kind": "verified",
+    "message": "VAT 19% editor is open",
+    "region": "(524,155)-(1721,590)"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:12:20",
+    "kind": "action",
+    "message": "closed the 'VAT 19%' tab"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:12:20",
+    "kind": "verified",
+    "message": "reusing an existing VAT rate",
+    "name": "VAT 19%",
+    "value": "19",
+    "code": "S (Standard rate)"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:12:22",
+    "kind": "action",
+    "message": "selected menu New > New product"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:12:22",
+    "kind": "verified",
+    "message": "New product editor is open",
+    "region": "(524,155)-(1721,590)"
+  },
+  {
+    "step": 3,
+    "at": [
+      674,
+      204
+    ],
+    "kind": "action",
+    "message": "set field ~'^Number$' = 'NL-7788'"
+  },
+  {
+    "step": 3,
+    "at": [
+      673,
+      228
+    ],
+    "kind": "action",
+    "message": "set field ~'^Name$' = 'Filterkaffee Bio 1kg'"
+  },
+  {
+    "step": 3,
+    "at": [
+      707,
+      407
+    ],
+    "kind": "action",
+    "message": "set field ~'^\\\\(gross\\\\)$' = '22.49'"
+  },
+  {
+    "step": 3,
+    "at": [
+      708,
+      431
+    ],
+    "kind": "action",
+    "message": "set field ~'^\\\\(net\\\\)$' = '0.00'"
+  },
+  {
+    "step": 3,
+    "at": [
+      708,
+      481
+    ],
+    "kind": "action",
+    "message": "set field ~'^Stock$' = '0.00'"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:13:01",
+    "kind": "action",
+    "message": "selected 'VAT 19%' from a dropdown"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:13:01",
+    "kind": "action",
+    "message": "pressed toolbar 'Save'"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:13:01",
+    "kind": "verified",
+    "message": "save committed",
+    "editor": "Filterkaffee Bio 1kg"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:13:01",
+    "kind": "verified",
+    "message": "created the Product",
+    "sku": "NL-7788",
+    "gross_price": "22.49",
+    "vat": "VAT 19%"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:13:02",
+    "kind": "action",
+    "message": "switched back to the 'New Order' tab"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:13:09",
+    "kind": "action",
+    "message": "opened the Product selector"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:13:14",
+    "kind": "verified",
+    "message": "selected an existing Product",
+    "sku": "NL-7788"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:13:14",
+    "kind": "info",
+    "message": "completing line 1/2: NL-4021"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:13:25",
+    "kind": "info",
+    "message": "located Items columns",
+    "pitch": 75.5,
+    "qty": 628,
+    "u_price": 1081,
+    "discount": 1157
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:13:29",
+    "kind": "action",
+    "message": "completed the item line",
+    "sku": "NL-4021",
+    "qty": "24",
+    "unit_net": "12.50",
+    "discount": "0"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:13:29",
+    "kind": "info",
+    "message": "completing line 2/2: NL-7788"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:13:36",
+    "kind": "action",
+    "message": "completed the item line",
+    "sku": "NL-7788",
+    "qty": "10",
+    "unit_net": "18.90",
+    "discount": "10"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:14:01",
+    "kind": "verified",
+    "message": "line 1 carries the extracted VAT and totals as the document does",
+    "sku": "NL-4021",
+    "row": "1 24.00 NL-4021 Edelstahl Edelstahl .. ... VAT 19% (... (.... * EGP12.50 EGP12.50 0.00 0.00% % EGP300.00 EGP300."
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:14:01",
+    "kind": "verified",
+    "message": "line 2 carries the extracted VAT and totals as the document does",
+    "sku": "NL-7788",
+    "row": "2 10.00 NL-7788 __ VAT 19% | -10.00 | EGP170.10"
+  },
+  {
+    "step": 3,
+    "at": "2026-08-17T21:14:08",
+    "kind": "verified",
+    "message": "total net matches the source line items",
+    "net": "470.10"
+  },
+  {
+    "step": 4,
+    "at": "2026-08-17T21:14:08",
+    "kind": "step",
+    "message": "all item lines complete",
+    "screenshot": "04-all-item-lines-complete.png"
+  },
+  {
+    "step": 4,
+    "at": "2026-08-17T21:14:18",
+    "kind": "verified",
+    "message": "order-level Discount is 0% and shipping is free"
+  },
+  {
+    "step": 4,
+    "at": "2026-08-17T21:14:26",
+    "kind": "verified",
+    "message": "Order totals match the source document",
+    "total net": "470.10",
+    "VAT": "89.32",
+    "total gross": "559.42"
+  },
+  {
+    "step": 4,
+    "at": "2026-08-17T21:14:27",
+    "kind": "action",
+    "message": "pressed toolbar 'Save'"
+  },
+  {
+    "step": 4,
+    "at": "2026-08-17T21:14:27",
+    "kind": "verified",
+    "message": "save committed",
+    "editor": "PO000001"
+  },
+  {
+    "step": 4,
+    "at": "2026-08-17T21:14:27",
+    "kind": "verified",
+    "message": "Order saved",
+    "document": "PO000001"
+  },
+  {
+    "step": 5,
+    "at": "2026-08-17T21:14:27",
+    "kind": "step",
+    "message": "order saved",
+    "screenshot": "05-order-saved.png"
+  },
+  {
+    "step": 5,
+    "at": "2026-08-17T21:14:29",
+    "kind": "action",
+    "message": "selected menu Data > Documents"
+  },
+  {
+    "step": 5,
+    "at": "2026-08-17T21:14:39",
+    "kind": "verified",
+    "message": "Documents lists PO000001 dated 2026-03-12 with reference PO-2026-0412, state open and total 559.42",
+    "row": "PO000001 POOO00001 Mar 12, 2026 2026 Nordlicht Handels... Handels PO-2026-0412 =| open EGP559.42"
+  },
+  {
+    "step": 5,
+    "at": "2026-08-17T21:14:47",
+    "kind": "action",
+    "message": "pressed Invoice in the Order's follow-up area"
+  },
+  {
+    "step": 5,
+    "at": "2026-08-17T21:14:49",
+    "kind": "verified",
+    "message": "New Invoice editor is open",
+    "region": "(524,155)-(1721,590)"
+  },
+  {
+    "step": 6,
+    "at": "2026-08-17T21:14:49",
+    "kind": "step",
+    "message": "invoice created from order",
+    "screenshot": "06-invoice-created-from-order.png"
+  },
+  {
+    "step": 6,
+    "at": "2026-08-17T21:15:14",
+    "kind": "verified",
+    "message": "Invoice carries the Order Date",
+    "date": "2026-03-12"
+  },
+  {
+    "step": 6,
+    "at": "2026-08-17T21:15:17",
+    "kind": "verified",
+    "message": "document VAT mode is `With VAT`"
+  },
+  {
+    "step": 6,
+    "at": "2026-08-17T21:15:51",
+    "kind": "verified",
+    "message": "line 1 carries the extracted VAT and totals as the document does",
+    "sku": "NL-4021",
+    "row": "bes LG 1 24.00 NL-4021 i. Fw Edelstahl NAN ... te VAT 19% \\ (... * EGP12.50 0.00 % EGP300.00"
+  },
+  {
+    "step": 6,
+    "at": "2026-08-17T21:15:51",
+    "kind": "verified",
+    "message": "line 2 carries the extracted VAT and totals as the document does",
+    "sku": "NL-7788",
+    "row": "2 10.00 NL-7788 Filterkaffe... VAT 19% (... * EGP18.90 -10.00 % + EGP170.10"
+  },
+  {
+    "step": 6,
+    "at": "2026-08-17T21:15:51",
+    "kind": "verified",
+    "message": "Invoice inherited the Order's reference, date, VAT mode, lines and total"
+  },
+  {
+    "step": 6,
+    "at": "2026-08-17T21:15:58",
+    "kind": "verified",
+    "message": "Invoice payment method is correct",
+    "method": "Bank Transfer"
+  },
+  {
+    "step": 6,
+    "at": "2026-08-17T21:15:59",
+    "kind": "action",
+    "message": "ticked the Invoice's paid box"
+  },
+  {
+    "step": 6,
+    "at": [
+      700,
+      540
+    ],
+    "kind": "action",
+    "message": "set date ~'^at$' = 2026-03-20"
+  },
+  {
+    "step": 6,
+    "at": "2026-08-17T21:16:10",
+    "kind": "verified",
+    "message": "Invoice marked paid",
+    "date": "2026-03-20",
+    "value": "559.42"
+  },
+  {
+    "step": 6,
+    "at": "2026-08-17T21:16:11",
+    "kind": "action",
+    "message": "pressed toolbar 'Save'"
+  },
+  {
+    "step": 6,
+    "at": "2026-08-17T21:16:11",
+    "kind": "verified",
+    "message": "save committed",
+    "editor": "INV000001"
+  },
+  {
+    "step": 6,
+    "at": "2026-08-17T21:16:11",
+    "kind": "verified",
+    "message": "Invoice saved",
+    "document": "INV000001"
+  },
+  {
+    "step": 7,
+    "at": "2026-08-17T21:16:11",
+    "kind": "step",
+    "message": "invoice saved",
+    "screenshot": "07-invoice-saved.png"
+  },
+  {
+    "step": 7,
+    "at": "2026-08-17T21:16:13",
+    "kind": "action",
+    "message": "selected menu Data > Documents"
+  },
+  {
+    "step": 7,
+    "at": "2026-08-17T21:16:24",
+    "kind": "verified",
+    "message": "Documents lists Invoice INV000001 with reference PO-2026-0412, the extracted payment state and total 559.42",
+    "row": "INVO00001 Aug 17, 2026 Nordlicht Handels PO-2026-0412 Y | EG paid EGP559.42"
+  },
+  {
+    "step": 7,
+    "at": "2026-08-17T21:16:31",
+    "kind": "verified",
+    "message": "the source Order PO000001 is still listed as open with the same reference and total",
+    "row": "PO000001 Mar 12, 2026 Handels ... PO-2026-0412 open EGP559.42"
+  },
+  {
+    "step": 7,
+    "at": "2026-08-17T21:16:31",
+    "kind": "info",
+    "message": "run complete",
+    "artifacts": "runs/20260817-210648",
+    "created": [
+      "created the payment method",
+      "created the Debtor",
+      "created the VAT rate",
+      "created the Product",
+      "created the Product"
+    ]
+  }
+]
