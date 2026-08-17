@@ -1,0 +1,10 @@
+runs/
+__pycache__/
+*.pyc
+.venv/
+.env
+*.dmg
+.DS_Store
+.pytest_cache/
+# the recorder's intermediate frames; the encoded mp4 is kept
+*.frames/
